@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet Distinction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Distinction</h1>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i>Accueil</a></li>
+                <li><a href="assistance.html"><i class="fas fa-handshake"></i> Assistance</a></li>
+                <li><a href="gestion.html"><i class="fas fa-briefcase"></i> Gestion d'Entreprise</a></li>
+                <li><a href="formation.html"><i class="fas fa-graduation-cap"></i>Formation</a></li>
+                <li><a href="etude.html"><i class="fas fa-chart-line"></i>Etude</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <h1>Cabinet Dictinction</h1>
+                <p>Votre partenaire de confiance pour la réussite de votre entreprise</p>
+                <div class="hero-buttons">
+                    <!-- <a href="#services" class="cta-button primary">Nos Services</a> -->
+                    <a href="#contact" class="cta-button secondary">Nous Contacter</a>
+                </div>
+            </div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </section>
+
+        <section id="galerie" class="gallery">
+            <h2>Nos Réalisations</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="conseil">Conseil</button>
+                <button class="filter-btn" data-filter="assistance">Assistance</button>
+                <button class="filter-btn" data-filter="formation">Formation</button>
+            </div>
+            <div class="image-grid">
+                <div class="image-card" data-category="conseil">
+                    <div class="image-container">
+                        <img src="images/image1.jpg" alt="Conseil en stratégie">
+                        <div class="image-overlay">
+                            <h3>Conseil en stratégie</h3>
+                            <p>Accompagnement personnalisé pour votre croissance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card" data-category="assistance">
+                    <div class="image-container">
+                        <img src="images/image2.jpg" alt="Assistance professionnelle">
+                        <div class="image-overlay">
+                            <h3>Assistance professionnelle</h3>
+                            <p>Solutions adaptées à vos besoins</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card" data-category="formation">
+                    <div class="image-container">
+                        <img src="images/image3.jpg" alt="Formation continue">
+                        <div class="image-overlay">
+                            <h3>Formation continue</h3>
+                            <p>Développez vos compétences</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card" data-category="conseil">
+                    <div class="image-container">
+                        <img src="images/image4.jpg" alt="Accompagnement">
+                        <div class="image-overlay">
+                            <h3>Accompagnement</h3>
+                            <p>Suivi personnalisé de vos projets</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card" data-category="assistance">
+                    <div class="image-container">
+                        <img src="images/image5.jpg" alt="Solutions innovantes">
+                        <div class="image-overlay">
+                            <h3>Solutions innovantes</h3>
+                            <p>Technologies et méthodes modernes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-card" data-category="formation">
+                    <div class="image-container">
+                        <img src="images/image6.jpg" alt="Expertise">
+                        <div class="image-overlay">
+                            <h3>Expertise</h3>
+                            <p>Savoir-faire reconnu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Cabinet Distinction</h3>
+                <p>Votre partenaire de confiance</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Cabinet Distinction. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filtrage des images
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const imageCards = document.querySelectorAll('.image-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                imageCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Animation au scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        });
+
+        document.querySelectorAll('.image-card, .hero-content, .gallery h2').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

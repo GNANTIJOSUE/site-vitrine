@@ -16,7 +16,10 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>Distinction</h1>
+                <h1>logo</h1>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i>Accueil</a></li>
@@ -34,16 +37,16 @@
             <div class="hero-content">
                 <h1>Gestion d'Entreprise</h1>
                 <p class="hero-subtitle">Optimisez votre entreprise avec notre expertise en gestion</p>
-                <p class="hero-description">Nous accompagnons votre croissance avec des solutions stratégiques et innovantes, adaptées à vos objectifs et à votre secteur d'activité.</p>
+                <p class="hero-description">Nous accompagnons votre croissance avec des solutions stratégiques et innovantes.</p>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">200+</span>
                         <span class="stat-label">Entreprises Accompagnées</span>
                     </div>
-                    <div class="stat-item">
+                    <!-- <div class="stat-item">
                         <span class="stat-number">45%</span>
                         <span class="stat-label">Croissance Moyenne</span>
-                    </div>
+                    </div> -->
                     <div class="stat-item">
                         <span class="stat-number">20+</span>
                         <span class="stat-label">Secteurs d'Activité</span>
@@ -171,6 +174,32 @@
 
         document.querySelectorAll('.service-card, .expertise-card, .service-intro, .cta-section').forEach((el) => {
             observer.observe(el);
+        });
+
+        // Menu Mobile Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
         });
     </script>
 </body>

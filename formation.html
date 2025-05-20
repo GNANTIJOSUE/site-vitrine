@@ -14,10 +14,13 @@
 
 <body>
     <header>
+        <div class="logo">
+            <h1>Distinction</h1>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
         <nav>
-            <div class="logo">
-                <h1>Distinction</h1>
-            </div>
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i>Accueil</a></li>
                 <li><a href="assistance.html"><i class="fas fa-handshake"></i> Assistance</a></li>
@@ -27,6 +30,7 @@
             </ul>
         </nav>
     </header>
+    <div class="menu-overlay"></div>
 
     <main>
         <section class="formation-hero">
@@ -61,15 +65,15 @@
                 <div class="programs-grid">
                     <div class="program-card">
                         <div class="program-icon">
-                            <i class="fas fa-laptop-code"></i>
+                            <i class="fas fa-bullhorn"></i>
                         </div>
                         <div class="program-content">
-                            <h3>Formation Digitale</h3>
-                            <p>Maîtrisez les outils numériques</p>
+                            <h3>Gestion</h3>
+                            <p>Perfectionnez vos techniques de gestion</p>
                             <ul class="program-features">
-                                <li><i class="fas fa-check"></i> Marketing Digital</li>
-                                <li><i class="fas fa-check"></i> Gestion de Projet</li>
-                                <li><i class="fas fa-check"></i> Outils Collaboratifs</li>
+                                <li><i class="fas fa-check"></i>comptabilité</li>
+                                <li><i class="fas fa-check"></i> Fiscalité</li>
+                                <li><i class="fas fa-check"></i> Entrepenariat et gestions d'Entreprise</li>
                             </ul>
                         </div>
                     </div>
@@ -82,24 +86,25 @@
                             <h3>Management</h3>
                             <p>Développez vos compétences managériales</p>
                             <ul class="program-features">
-                                <li><i class="fas fa-check"></i> Leadership</li>
-                                <li><i class="fas fa-check"></i> Communication</li>
-                                <li><i class="fas fa-check"></i> Gestion d'équipe</li>
+                                <li><i class="fas fa-check"></i>Marketing</li>
+                                <li><i class="fas fa-check"></i> Paie et Gestion du Personnel</li>
+                                <li><i class="fas fa-check"></i> Audit</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="program-card">
                         <div class="program-icon">
-                            <i class="fas fa-bullhorn"></i>
+
+                            <i class="fas fa-laptop-code"></i>
                         </div>
                         <div class="program-content">
-                            <h3>Communication</h3>
-                            <p>Perfectionnez vos techniques de communication</p>
+                            <h3>Formation Digitale</h3>
+                            <p>Maîtrisez les outils numériques</p>
                             <ul class="program-features">
-                                <li><i class="fas fa-check"></i> Présentation</li>
-                                <li><i class="fas fa-check"></i> Négociation</li>
-                                <li><i class="fas fa-check"></i> Relations clients</li>
+                                <li><i class="fas fa-check"></i> Informatique</li>
+                                <!-- <li><i class="fas fa-check"></i> Négociation</li>
+                                <li><i class="fas fa-check"></i> Relations clients</li> -->
                             </ul>
                         </div>
                     </div>
@@ -135,27 +140,55 @@
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2>Prêt à Développer Vos Compétences ?</h2>
-                <p>Découvrez nos programmes de formation</p>
-                <a href="#contact" class="cta-button primary">S'inscrire Maintenant</a>
-            </div>
-        </section>
+
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-info">
-                <h3>Cabinet Distinction</h3>
-                <p>Votre partenaire de confiance</p>
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Cabinet Distinction</h3>
+                    <p>Votre partenaire de confiance</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contactez-nous</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +225 0102626207</li>
+                        <li><i class="fas fa-phone"></i> +225 0575502646</li>
+                        <li><i class="fas fa-envelope"></i>cabinet-distinction@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Riviera palmeraie en face du restaurant SAMER prolongement du KING CASH</li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="assistance.html">Assistance</a></li>
+                        <li><a href="gestion.html">Gestion d'Entreprise</a></li>
+                        <li><a href="formation.html">Formation</a></li>
+                        <li><a href="etude.html">Études</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Restez informé de nos actualités</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div> -->
             </div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Cabinet Distinction. Tous droits réservés.</p>
             </div>
-            <p class="copyright">&copy; 2024 Cabinet Distinction. Tous droits réservés.</p>
         </div>
     </footer>
 
@@ -170,6 +203,33 @@
 
         document.querySelectorAll('.program-card, .method-card, .service-intro, .cta-section').forEach((el) => {
             observer.observe(el);
+        });
+
+        // Menu Mobile Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+        const menuOverlay = document.querySelector('.menu-overlay');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        });
+
+        menuOverlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+        });
+
+        // Fermer le menu quand on clique sur un lien
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
         });
     </script>
 </body>

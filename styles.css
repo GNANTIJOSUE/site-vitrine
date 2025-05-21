@@ -50,6 +50,17 @@ nav {
     font-weight: 700;
 }
 
+.logo img {
+    width: 90px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    background: none;
+    margin-right: 10px;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -89,7 +100,7 @@ main {
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background: linear-gradient(rgba(48, 47, 47, 0.7), rgba(0, 0, 0, 0.7)), url('images/ima.jpg');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -938,7 +949,7 @@ nav ul li a.active i {
 .assistance-hero {
     position: relative;
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-image: url('images/image2.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -947,6 +958,20 @@ nav ul li a.active i {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        text-align: center;
+        padding: 10rem 2rem;
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .hero-overlay {
@@ -1488,7 +1513,7 @@ nav ul li a.active i {
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-image: url('images/ima.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1778,7 +1803,7 @@ nav ul li a.active i {
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-image: url('images/image2.jpg');
     background-size: cover;
     background-position: center;
     color: white;
